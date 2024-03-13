@@ -1,0 +1,9 @@
+package vn.stu.quanlydiem.Responsitory;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import vn.stu.quanlydiem.Model.Danhgia;
+@Repository
+public interface DanhgiaRepository extends JpaRepository<Danhgia, Integer> {
+    
+}
