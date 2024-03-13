@@ -1,11 +1,13 @@
 package vn.stu.quanlydiem.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Set;
 
 @AllArgsConstructor
@@ -42,6 +44,8 @@ public class Hocvien {
 
 
     @OneToMany(mappedBy = "maHocVien")
-    private Set<Diem> diems = new LinkedHashSet<>();
+    @JsonIgnore
+    @ToString.Exclude
+    private List<Diem> diems;
 
 }
